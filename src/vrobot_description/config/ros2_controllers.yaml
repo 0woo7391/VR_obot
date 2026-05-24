@@ -1,0 +1,42 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # 제어 루프 갱신 주기 (100Hz)
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    doosan_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+# 두산 로봇 팔 제어기 매핑
+doosan_arm_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+# 로보티즈 그리퍼 제어기 매핑
+gripper_controller:
+  ros__parameters:
+    joints:
+      - rh_r1
+      - rh_r2
+      - rh_l1
+      - rh_l2
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

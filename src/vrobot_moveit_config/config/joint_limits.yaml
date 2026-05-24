@@ -1,0 +1,86 @@
+# vrobot 통합 시스템 관절 한계 도면 (두산 E0509 + 로보티즈 RH-P12-RN-A)
+joint_limits:
+  # --- 두산 로봇 팔 6축 실제 기계 스펙 제한 ---
+  joint_1:
+    has_position_limits: true
+    min_position: -6.283185
+    max_position: 6.283185
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  joint_2:
+    has_position_limits: true
+    min_position: -2.530727
+    max_position: 2.530727
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  joint_3:
+    has_position_limits: true
+    min_position: -2.530727
+    max_position: 2.530727
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  joint_4:
+    has_position_limits: true
+    min_position: -6.283185
+    max_position: 6.283185
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  joint_5:
+    has_position_limits: true
+    min_position: -6.283185
+    max_position: 6.283185
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  joint_6:
+    has_position_limits: true
+    min_position: -6.283185
+    max_position: 6.283185
+    has_velocity_limits: true
+    max_velocity: 3.14159
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+
+  # --- 로보티즈 그리퍼 4축 스트로크(0~100mm) 물리적 회전 각도 제한 ---
+  rh_r1:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 1.100000
+    has_velocity_limits: true
+    max_velocity: 2.00000
+    has_acceleration_limits: true
+    max_acceleration: 2.0
+  rh_r2:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 1.100000
+    has_velocity_limits: true
+    max_velocity: 2.00000
+    has_acceleration_limits: true
+    max_acceleration: 2.0
+  rh_l1:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 1.100000
+    has_velocity_limits: true
+    max_velocity: 2.00000
+    has_acceleration_limits: true
+    max_acceleration: 2.0
+  # 실물 제어 시 종속 구동축(Passive) 또는 마스터 축에 연동되는 물리적 한계 지정
+  rh_l2:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 1.100000
+    has_velocity_limits: true
+    max_velocity: 2.00000
+    has_acceleration_limits: true
+    max_acceleration: 2.0

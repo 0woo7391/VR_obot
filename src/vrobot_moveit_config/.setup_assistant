@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: vrobot_description
+    relative_path: urdf/vrobot.urdf.xacro
+  srdf:
+    relative_path: config/vrobot.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1778910500

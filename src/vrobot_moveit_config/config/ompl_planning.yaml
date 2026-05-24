@@ -1,0 +1,27 @@
+planning_plugin: ompl_interface/OMPLPlanner
+request_adapters: >-
+  default_planner_request_adapters/AddTimeOptimalParameterization
+  default_planner_request_adapters/FixWorkspaceBounds
+  default_planner_request_adapters/FixStartStateBounds
+  default_planner_request_adapters/FixStartStateCollision
+  default_planner_request_adapters/FixStartStatePathConstraints
+
+planner_configs:
+  RRTConnectkConfigDefault:
+    type: geometric::RRTConnect
+    range: 0.0  # Max motion added to tree. Rules of thumb: 0 = use 10% of state space extent, 5% of state space extent if 0 doesn't work.
+  RRTstarkConfigDefault:
+    type: geometric::RRTstar
+    range: 0.0
+    goal_bias: 0.05
+    delay_collision_checking: 1
+doosan_arm:
+  planner_configs:
+    - RRTConnectkConfigDefault
+    - RRTstarkConfigDefault
+  default_planner_config: RRTstarkConfigDefault
+gripper:
+  planner_configs:
+    - RRTConnectkConfigDefault
+    - RRTstarkConfigDefault
+  default_planner_config: RRTstarkConfigDefault

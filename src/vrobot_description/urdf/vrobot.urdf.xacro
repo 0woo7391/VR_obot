@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="vrobot">
+
+  <xacro:arg name="namespace" default=""/>
+  <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="use_fake_hardware" default="true"/>
+
+  <xacro:include filename="$(find dsr_description2)/xacro/macro.e0509.white.xacro"/>
+  <xacro:e0509 namespace="$(arg namespace)"/>
+
+  <xacro:include filename="$(find rh_p12_rn_a_description)/urdf/rh_p12_rn_a.xacro" />
+  <xacro:rh_p12_rn_a prefix="$(arg prefix)" />
+
+  <joint name="vrobot_coupling_joint" type="fixed">
+    <parent link="link_6"/>
+    <child link="$(arg prefix)rh_p12_rn_base"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:if value="$(arg use_fake_hardware)">
+    <xacro:include filename="$(find vrobot_description)/urdf/vrobot_mock_ros2_control.xacro"/>
+    <xacro:vrobot_mock_ros2_control/>
+  </xacro:if>
+
+  <!-- Real backend definition will be added when physical hardware integration starts. -->
+  <xacro:unless value="$(arg use_fake_hardware)">
+    <xacro:include filename="$(find vrobot_description)/urdf/vrobot_real_ros2_control.xacro"/>
+    <xacro:vrobot_real_ros2_control/>
+  </xacro:unless>
+
+</robot>

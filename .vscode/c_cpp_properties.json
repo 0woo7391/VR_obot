@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/pyw/Vrobot_ws/install/dsr_realtime_control/include/**",
+        "/home/pyw/Vrobot_ws/install/dsr_controller2/include/**",
+        "/home/pyw/Vrobot_ws/install/dsr_msgs2/include/**",
+        "/home/pyw/Vrobot_ws/install/dsr_hardware2/include/**",
+        "/home/pyw/Vrobot_ws/install/dsr_common2/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/pyw/Vrobot_ws/src/doosan-robot2/dsr_common2/include/**",
+        "/home/pyw/Vrobot_ws/src/doosan-robot2/dsr_controller2/include/**",
+        "/home/pyw/Vrobot_ws/src/doosan-robot2/dsr_example2/dsr_realtime_control/include/**",
+        "/home/pyw/Vrobot_ws/src/doosan-robot2/dsr_hardware2/include/**",
+        "/home/pyw/Vrobot_ws/src/vrobot_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ros2",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

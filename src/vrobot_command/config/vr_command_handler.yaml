@@ -1,0 +1,22 @@
+vr_command_handler:
+  ros__parameters:
+    expected_frame_id: base_link
+    workspace_enabled: false
+    workspace_min: [-1.0, -1.0, 0.0]
+    workspace_max: [1.0, 1.0, 1.5]
+    planning_group: doosan_arm
+    end_effector_link: link_6
+    planning_service_name: /plan_kinematic_path
+    execute_action_name: /execute_trajectory
+    execute_enabled: false
+    gripper_action_name: /gripper_controller/follow_joint_trajectory
+    gripper_min_position: 0.0
+    gripper_max_position: 1.1
+    gripper_motion_duration: 1.0
+    allowed_planning_time: 5.0
+    planning_response_timeout: 6.0
+    execution_response_timeout: 15.0
+    communication_watchdog_timeout: 0.5
+    communication_watchdog_period: 0.1
+    position_tolerance: 0.005
+    orientation_tolerance: 0.15

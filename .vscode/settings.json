@@ -1,0 +1,20 @@
+{
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/pyw/Vrobot_ws/build/rh_p12_rn_a_bringup",
+        "/home/pyw/Vrobot_ws/install/rh_p12_rn_a_bringup/lib/python3.10/site-packages",
+        "/home/pyw/Vrobot_ws/build/dsr_visualservoing",
+        "/home/pyw/Vrobot_ws/install/dsr_visualservoing/lib/python3.10/site-packages",
+        "/home/pyw/Vrobot_ws/build/dsr_tests",
+        "/home/pyw/Vrobot_ws/install/dsr_tests/lib/python3.10/site-packages",
+        "/home/pyw/Vrobot_ws/install/dsr_mujoco/local/lib/python3.10/dist-packages",
+        "/home/pyw/Vrobot_ws/build/dsr_bringup2",
+        "/home/pyw/Vrobot_ws/install/dsr_bringup2/lib/python3.10/site-packages",
+        "/home/pyw/Vrobot_ws/install/dsr_msgs2/local/lib/python3.10/dist-packages",
+        "/home/pyw/Vrobot_ws/build/dsr_example",
+        "/home/pyw/Vrobot_ws/install/dsr_example/lib/python3.10/site-packages",
+        "/home/pyw/Vrobot_ws/install/dsr_common2/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
