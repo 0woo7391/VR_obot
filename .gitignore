@@ -6,4 +6,9 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# 모든 마크다운 파일 무시
 *.md
+
+# 단, Run_Guide.md 파일은 깃 추적 허용 (예외 지정)
+!Run_Guide.md
